@@ -1,16 +1,10 @@
-require 'socket'
-
+require 'socket
 serverSocket = TCPServer.new(2100)
-puts 'Servidor iniciado'
-
+puts 'Servidor iniciado
 clientSocket = serverSocket.accept
-puts 'Aceitando conexao'
-
+puts 'Aceitando conexao
 dominio = clientSocket.gets.chomp
-ip = clientSocket.gets.chomp
-
-clientSocket.puts('Dominio:' + dominio + '   IP:'+ ip) 
-
+ip = clientSocket.gets.chom
+clientSocket.puts('Dominio:' + dominio + '   IP:'+ ip)
 clientSocket.close
-
 serverSocket.close
