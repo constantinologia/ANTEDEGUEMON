@@ -6,7 +6,7 @@ port = 2100
 
 socket = TCPSocket.open(hostname, port)
 
-socket.puts(dominio="chico", ip="192.168.0.1") 
+socket.puts(dominio="Bernadinho", ip="192.168.0.1") 
 
 msg = socket.gets.chomp
 
