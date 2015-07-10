@@ -1,15 +1,8 @@
-require 'socket'
-
-hostname = 'localhost'
-
+require 'socket
+hostname = 'localhost
 port = 2100
-
-socket = TCPSocket.open(hostname, port)
-
-socket.puts(dominio="Bernadinho", ip="192.168.0.1") 
-
-msg = socket.gets.chomp
-
+socket = TCPSocket.open(hostname, port
+socket.puts(dominio="Nokia", ip="192.168.0.1")
+msg = socket.gets.chom
 puts msg
-
 socket.close
