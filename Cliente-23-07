@@ -5,4 +5,4 @@ inicio = Time.now
 for i in 1..5 do
 t = Thread.start(TCPSocket.new(hostname, port)) do |socket|
 socket.puts('msg')
-puts socket.getssocket.close
+puts socket.gets socket.close
