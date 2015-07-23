@@ -6,4 +6,11 @@ for i in 1..5 do
 t = Thread.start(TCPSocket.new(hostname, port)) do |socket|
 socket.puts('msg')
 puts socket.gets socket.close
-End
+end
+threads << t #adiciona a thread ao arrays
+end
+threads.each do |t|
+t.join
+end
+fim = Time.now
+puts "{fim - inicio} s"
