@@ -1,0 +1,7 @@
+requir 'socket'
+serverSocket = TCPServe.new(2000)
+clientSocket = clientSocket.accept
+begin
+  nome_arquivo = clientSocket.gets.chomp
+  tamanho_arquivo = clientSocket.gets.chomp.to_i
+  bytes_arquivo = 
