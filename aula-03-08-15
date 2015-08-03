@@ -4,4 +4,9 @@ clientSocket = clientSocket.accept
 begin
   nome_arquivo = clientSocket.gets.chomp
   tamanho_arquivo = clientSocket.gets.chomp.to_i
-  bytes_arquivo = 
+  bytes_arquivo = clientSocket.read (tamanho_arquio)
+  arquivo = File.new("copia_#{nome_arquivo}", "wb")
+  arquivo.syswrite(bytes_arquivo)
+ensure
+  serverSocket.close
+end
