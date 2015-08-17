@@ -1,5 +1,5 @@
 require 'net/http'
-resposta = Net::HTTP.get_response('portal.ifrn.edu.br', */')
+resposta = Net::HTTP.get_response('portal.ifrn.edu.br', '/')
 if resposta.code == '200'
   resposta.header.each_header do |campo.valor|
     puts '#{campo}: #{valor}"
