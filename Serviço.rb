@@ -9,6 +9,10 @@ include REXML
 #put 	/api/copas/:id 	atualiza uma copa específica pelo id
 #delete 	/api/copas/:id 	deleta uma copa pelo id
 
+get '/api/copas' do
+  format_response(Copa.all, request.accept)
+end
+
 get '/' do
   
   "Hello World!"
